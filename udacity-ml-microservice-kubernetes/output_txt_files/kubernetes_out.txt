@@ -1,1 +1,17 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) udacity-ml-microservice-kubernetes $ ./make_prediction.sh 
+Port: 8080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(.devops) udacity-ml-microservice-kubernetes $ 
+
+(.devops) udacity-ml-microservice-kubernetes $ ./run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+Error from server (AlreadyExists): deployments.apps "ml-microservice-kubernetes" already exists
+NAME                                         READY   STATUS    RESTARTS   AGE
+ml-microservice-kubernetes-87d45f447-rzndv   1/1     Running   0          3m46s
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+Handling connection for 8080
